@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: "Sono", sans-serif;
+            background-color: rgb(251, 248, 248);
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+        .header p:nth-child(1) {
+            margin-top: 4rem;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .header p:nth-child(2) {
+            font-size: 0.9rem;
+            width: 60%;
+        }
+        .pricing-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 2rem;
+            gap: 3rem;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+        .pricing-plan {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 5px 5px 18px rgb(193, 167, 167);
+            width: 230px;
+            transition: 0.35s ease;
+            .plan-price span {
+                font-weight: bold;
+            }
+            .plan-title {
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                font-size: x-large;
+                font-weight: bold;
+                padding: 1.82rem;
+                color: white;
+            }
+            .content {
+                padding: 1.82rem;
+                .plan-price {
+                    font-weight: bold;
+                    font-size: 2rem;
+                }
+                .plan-features {
+                    p {
+                        border-bottom: 0.5px solid rgb(183, 177, 177);
+                        font-size: 13px;
+                        color: rgb(183, 177, 177);
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+        .pricing-plan:hover {
+            border: 2px solid linear-gradient(to bottom right, rgb(0, 123, 255), rgb(70, 130, 180));
+        }
+        .pricing-plan:nth-of-type(1) .plan-price {
+            background: linear-gradient(to bottom right, rgb(0, 123, 255), rgb(70, 130, 180));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .pricing-plan:nth-of-type(2) .plan-price {
+            background: linear-gradient(to bottom right, rgb(70, 130, 180), rgb(138, 43, 226));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .pricing-plan:nth-of-type(3) .plan-price {
+            background: linear-gradient(to bottom right, rgb(138, 43, 226), rgb(255, 105, 180));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .pricing-plan:hover {
+            transform: scale(1.1) translateY(-5px);
+        }
+        .pricing-plan:nth-of-type(1) .plan-button, 
+        .pricing-plan:nth-of-type(1) .plan-title {
+            background: linear-gradient(to bottom right, rgb(0, 123, 255), rgb(70, 130, 180));
+        }
+        .pricing-plan:nth-of-type(2) .plan-button, 
+        .pricing-plan:nth-of-type(2) .plan-title {
+            background: linear-gradient(to bottom right, rgb(70, 130, 180), rgb(138, 43, 226));
+        }
+        .pricing-plan:nth-of-type(3) .plan-button, 
+        .pricing-plan:nth-of-type(3) .plan-title {
+            background: linear-gradient(to bottom right, rgb(138, 43, 226), rgb(255, 105, 180));
+        }
+        .plan-button {
+            padding: 9px 50px;
+            border-radius: 20px;
+            border: none;
+            font-weight: bold;
+            color: white;
+            font-size: 13px;
+            cursor: pointer;
+            margin-top: 13px;
+            transition: 0.35s;
+        }
+        .plan-button:hover {
+            box-shadow: 3px 3px 5px rgb(178, 177, 177);
+        }
+        .plan-button:active {
+            opacity: 0.88%;
+        }
+       
+           
+    </style>
+</head>
+
+<body>
+   
+    <div class="pricing-container">
+        <div class="pricing-plan">
+            <div class="plan-title">Basic</div>
+            <div class="content">
+                <div class="plan-price">$29.99</div>
+                <div class="plan-features">
+                    <p>10GB Storage</p>
+                    <p>1 User</p>
+                    <p>Support</p>
+                </div>
+                <button class="plan-button">Sign Up</button>
+            </div>
+        </div>
+        <div class="pricing-plan">
+            <div class="plan-title">Standard</div>
+            <div class="content">
+                <div class="plan-price">$49.99</div>
+                <div class="plan-features">
+                    <p>50GB Storage</p>
+                    <p>5 Users</p>
+                    <p>Email Support</p>
+                </div>
+                <button class="plan-button">Sign Up</button>
+            </div>
+        </div>
+        <div class="pricing-plan">
+            <div class="plan-title">Premium</div>
+            <div class="content">
+                <div class="plan-price">$99.99</div>
+                <div class="plan-features">
+                    <p>100GB Storage</p>
+                    <p>10 Users</p>
+                    <p>24/7 Support</p>
+                </div>
+                <button class="plan-button">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
